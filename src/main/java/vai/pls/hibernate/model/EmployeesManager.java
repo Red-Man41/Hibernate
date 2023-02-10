@@ -93,6 +93,11 @@ public class EmployeesManager
         }
     }
 
+    public void updateEmployeeSalary(Employee employee, double newSalary)
+    {
+        updateEmployeeSalary(employee.getId(), newSalary);
+    }
+
     public void fireEmployee(Long employeeID)
     {
         EntityTransaction tx = em.getTransaction();
@@ -112,6 +117,11 @@ public class EmployeesManager
             System.out.printf("Error:\n%s\n",e);
             e.printStackTrace();
         }
+    }
+
+    public void fireEmployee(Employee employee)
+    {
+        fireEmployee(employee.getId());
     }
 
     public void Stop()
