@@ -1,0 +1,25 @@
+<!--Questo file in realtà si può cancellare-->
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" version="2.0">
+    <description>
+        XML Student mapping
+    </description>
+
+    <entity class="Student">
+        <table name="Student" />
+            <attributes>
+                <id name="id">
+                    <generated-value strategy="AUTO" />
+                </id>
+
+                <basic name="firstName">
+                    <column name="first_name" length="50" />
+                </basic>
+
+                <basic name="lastName">
+                    <column name="last_name" length="50" />
+                </basic>
+                
+            </attributes>
+    </entity>
+</entity-mappings>
